@@ -39,7 +39,10 @@
 #         list_6.append(x * y)
 # print(list_6)
 
-
+# for hours in range(24):
+#     for minutes in range(60):
+#         for seconds in range(60):
+#             print(hours, ':', minutes, ':', seconds)
 
 # list_7 = [[x * y for x in range(1, 4)] for y in range(1, 4)]
 # print(list_7)
@@ -80,3 +83,112 @@
 # min(list) # возращает минимальный элемент списка
 # sum(list) # возращает сумму значений списка
 # sorted(list) #возращает копию списка list, в котором элементы упорядочены по возрастанию (если числа) и по алфовиту
+
+# from random import randint
+# new_list = [randint(1, 10) for i in range(10)]
+# print(sorted(new_list, reverse=True)) #возращает 
+# print(sorted(list('hello'), reverse=True))
+
+# print(new_list)
+# print(max(new_list))
+# print(min(new_list))
+# print(sum(new_list))
+# print(sum(new_list) / len(new_list))
+
+# category = ['Drama', 'Camedy']
+# category_2 = ['Action', 'Fantasy']
+# print(category + category_2)
+# print(category * 3)
+
+# methods spiskov
+# category = ['Drama', 'Comedy', 'Mystery', 'Romance', 'Horror']
+# for film in category:
+#     print(film) #  если добавить end=' ' получится в одну строку
+
+# for i in range(len(category)):
+#     print(category[i], end=' ')
+
+# # Методы добавления
+# category.append('Fantasy') #добавляет новый элемент в свой аргумент в конец списка
+# print(category)
+# category.append([1, 2, 3]) #итерируемый обьект становится одним элементом списка
+# print(category)
+# category.extend([1, 2, 3, 4]) # добавляет каждый элемент фргумента-списка как отдельный элемент в целевой список
+# print(category)
+
+# category.insert(1, 'ABOBA') #добавляет элементна определенную строку
+# print(category)
+
+# методы удаления
+# category = ['Drama', 'Comedy', 'Mystery', 'Romance', 'Horror']
+# print(category)
+
+# category.remove('Romance') # удаляет первое вхождение указанного значения в списке
+# print(category)
+
+# a = category.pop(1) #удаляет элемент списка по индексуи возращает значение удаленного элемента
+# print(category)
+# print(a)
+
+# category.pop() #удаляет последний элемент списка
+# print(category)
+
+# category.clear() #удаляет все элементы из списка
+# print(category)
+
+# Другие полезные методы
+# category = ['Drama', 'Comedy', 'Mystery', 'Romance', 'Horror']
+
+# print(category.index('Romance')) #Возращает индекс первого вхождения значения в списке
+# print(category.count('Romance')) # Возращает количество значений аргумента в списке
+# category.sort() # сортирует список по возрастанию
+# category.sort(reverse=True) # сортирует список по убыванию
+# print(category)
+# category.reverse() #меняет порядок сортировки элемента на обратный
+# print(category)
+
+# Оператор пренадлежности in
+# customers = ['bob', 'anna', 'joe', 'bob', 'nick']
+# print('bob' in customers)
+
+# if 'bob' in customers:
+#     print('bob is our customer')
+# else:
+#     print('Sorry')
+
+# Псевдонимы и клонирование
+# list_1 = [1, 2, 3, 4, 5]
+# print(list_1)
+
+# list_2 = list_1
+
+# print(list_2)
+
+# list_2[1] = 'Hello'
+
+# print(list_1)
+# print(list_2)
+
+# list_3 = [6, 7, 8]
+
+# print(list_2 is list_1)
+# print(list_3 is list_1)
+
+# Как создать новый список с теми же значениями
+list_1 = [1, 2, 3, 4, 5]
+print(list_1)
+
+list_2 = list_1.copy() #копировать элементы списка в новый список
+list_2[1] = 'Hello'
+print(list_1)
+print(list_2)
+
+list_3 = list(list_1)
+list_3[3] = 'Hello'
+print(list_3)
+print(list_1)
+
+list_4 = list_1[:]
+list_4[2] = 'Hello'
+print(list_4)
+print(list_1)
